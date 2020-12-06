@@ -30,7 +30,7 @@ class WeatherActivity : AppCompatActivity() {
         val tmpmax = findViewById<TextView>(R.id.tv_tmp_max)
         val speedofwind = findViewById<TextView>(R.id.tv_wind_speed)
         val imgsearch:ImageView=findViewById<ImageView>(R.id.img_search)
-
+       Log.e("hhh","kkkk")
         val cloud = findViewById<TextView>(R.id.tv_cloud)
 
         val apikey:String?="c97a5f6d2aae53ef832376eb07ccae11"
