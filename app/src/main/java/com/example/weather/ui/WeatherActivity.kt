@@ -44,7 +44,6 @@ class WeatherActivity : AppCompatActivity() {
                    .build()
            val api: ApiManager = retrofit.create(ApiManager::class.java)
            val call = api.getWeather(nameofcitys,apikey)
-           Log.e("jjjj","kkkk")
            var item = call.enqueue(object : Callback<Data> {
                override fun onFailure(call: Call<Data>, t: Throwable) {
                    Toast.makeText(this@WeatherActivity, "failer connect", Toast.LENGTH_SHORT).show()
