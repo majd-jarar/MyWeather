@@ -34,7 +34,6 @@ class WeatherActivity : AppCompatActivity() {
         val cloud = findViewById<TextView>(R.id.tv_cloud)
 
         val apikey:String?="c97a5f6d2aae53ef832376eb07ccae11"
-//        "http://api.openweathermap.org/data/2.5/"
        imgsearch.setOnClickListener(View.OnClickListener {
            val URL = BuildConfig.My_CLOUD_API
            var nameofcitys:String?= edsearh.getText().toString()
