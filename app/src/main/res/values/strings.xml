@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="name_of_city">Name of City</string>
+    <string name="temprature">Temprature</string>
+    <string name="speed"> Speed</string>
+    <string name="fivteen">15</string>
+    <string name="t_maximam">T_Maximam</string>
+    <string name="t_minimum">T_Minimum</string>
+    <string name="cloud">Cloud</string>
+    <string name="point">...</string>
+</resources>
