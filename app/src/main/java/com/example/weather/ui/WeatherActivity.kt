@@ -53,7 +53,7 @@ class WeatherActivity : AppCompatActivity() {
                override fun onResponse(call: Call<Data>, response: Response<Data>) {
                    var allData: Data? = response.body()
                    if (allData != null) {
-
+Log.e("kkkk",allData.toString())
                        cityname.setText(allData.name)
                        cityname.setVisibility(View.VISIBLE)
                        tempreture.setText(allData.main.temp.toString())
