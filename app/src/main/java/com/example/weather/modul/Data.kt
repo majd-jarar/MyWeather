@@ -3,17 +3,21 @@ package com.example.weather.modul
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Data(var coord: Coord,var weather: List<Weather>,var base: String,var main: Main,var visibility: Int
-,var wind: Wind,var clouds: Clouds,var dt: Int,var syc: Syc, var timezone: Int,var id: Int,var name: String,var cod: Int)
-
-
-
-
-
-
-
-
-
+data class Data(
+        var coord: Coord,
+        var weather: List<Weather>,
+        var base: String,
+        var main: Main,
+        var visibility: Int,
+        var wind: Wind,
+        var clouds: Clouds,
+        var dt: Int,
+        var syc: Syc,
+        var timezone: Int,
+        var id: Int,
+        var name: String,
+        var cod: Int
+)
 
 
 //    private val coord: Coord? = null

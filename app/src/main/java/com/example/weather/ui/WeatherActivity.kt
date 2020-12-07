@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.weather.BuildConfig
 import com.example.weather.R
+import com.example.weather.databinding.ActivityWeatherBinding
 import com.example.weather.modul.Data
 import com.example.weather.network.ApiManager
 import retrofit2.Call
@@ -20,12 +21,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class WeatherActivity : AppCompatActivity() {
 
+    lateinit var binding : ActivityWeatherBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
+        binding = ActivityWeatherBinding.inflate(layoutInflater)
         val cityname = findViewById<TextView>(R.id.tv_city_name)
         val tempreture = findViewById<TextView>(R.id.tv_temp)
-        var edsearh = findViewById<EditText>(R.id.ed_city_name)
+        var edsearh = findViewById<EditText>(R.id.cityNameEditText)
         val tmpmin = findViewById<TextView>(R.id.tv_tmp_min)
         val tmpmax = findViewById<TextView>(R.id.tv_tmp_max)
         val speedofwind = findViewById<TextView>(R.id.tv_wind_speed)
@@ -35,8 +39,9 @@ class WeatherActivity : AppCompatActivity() {
 
         val apikey:String?="c97a5f6d2aae53ef832376eb07ccae11"
        imgsearch.setOnClickListener(View.OnClickListener {
-           val URL = BuildConfig.My_CLOUD_API
            var nameofcitys:String?= edsearh.getText().toString()
+
+           val URL = BuildConfig.My_CLOUD_API
 
            val retrofit = Retrofit.Builder()
                    .baseUrl(URL)
